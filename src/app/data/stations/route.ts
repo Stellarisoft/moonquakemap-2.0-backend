@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-const dm = [
+const stations = [
     {
         mission: "Apollo 11",
         lat: 0.67337,
@@ -30,7 +30,7 @@ const dm = [
 
 export const GET = async (req: Request) => {
     try {
-        return NextResponse.json({ dm: dm }, { status: 200 });
+        return NextResponse.json({ stations: stations }, { status: 200 });
     } catch (err) {
         return NextResponse.json({ message: "Error", err }, { status: 500 })
     }
