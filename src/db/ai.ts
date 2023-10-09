@@ -100,3 +100,8 @@ const ai = [
 export const getAllAi = () => {
     return ai;
 }
+
+export const getAiById = (id: string) => {
+    const aiEvent = ai.find((a) => a.id == id)
+    return aiEvent == undefined ? "No AI found with that ID." : aiEvent;
+}

@@ -188,3 +188,8 @@ const dm = [
 export const getAllDm = () => {
     return dm;
 }
+
+export const getDmById = (id: string) => {
+    const dmEvent = dm.find((d) => d.id == id)
+    return dmEvent == undefined ? "No DM found with that ID." : dmEvent;
+}

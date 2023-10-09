@@ -220,3 +220,8 @@ const sm = [
 export const getAllSm = () => {
     return sm;
 }
+
+export const getSmById = (id: string) => {
+    const smEvent = sm.find((s) => s.id == id)
+    return smEvent == undefined ? "No station found with that ID." : smEvent;
+}
