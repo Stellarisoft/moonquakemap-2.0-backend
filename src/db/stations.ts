@@ -44,3 +44,12 @@ const stations = [
 export const getAllStations = () => {
     return stations;
 }
+
+export const getStationById = (id: string) => {
+    stations.forEach((station) => {
+        if (station.id === id) {
+            return station;
+        }
+    })
+    return "No station found with that ID."
+}
